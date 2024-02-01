@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
     dat_score = 0
+    best_student = None
     if a_dictionary is None:
         return None
     else:
