@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This module defines the Square class."""
 class Square:
-    # empty class that defines a square
+    """Initialization of a Square instance."""
     pass
