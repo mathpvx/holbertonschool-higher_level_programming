@@ -1,1 +1,4 @@
 *main.py
+test/ok.c
+test/test.py
+*.pyc
