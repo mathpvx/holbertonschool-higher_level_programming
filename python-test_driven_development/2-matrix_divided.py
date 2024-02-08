@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def matrix_divided(matrix, div):
     """Divides all elements of a matrix by a number.
     Returns: list of lists: new matrix with elements divided by div.
