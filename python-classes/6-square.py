@@ -16,7 +16,7 @@ and public instance methods to calculate area and print square."""
     @property
     def size(self):
         """get the private instance attribute size"""
-        return(self.__size)
+        return (self.__size)
 
     @size.setter
     def size(self, value):
@@ -30,7 +30,7 @@ and public instance methods to calculate area and print square."""
     @property
     def position(self):
         """gets the private instance attribute position"""
-        return(self.__position)
+        return (self.__position)
 
     @position.setter
     def position(self, value):
@@ -53,7 +53,7 @@ and public instance methods to calculate area and print square."""
 
     def area(self):
         """calculates and returns current square area"""
-        return(self.__size * self.__size)
+        return (self.__size * self.__size)
 
     def my_print(self):
         """prints square of size self.__size using #"""
