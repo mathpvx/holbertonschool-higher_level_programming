@@ -1,27 +1,27 @@
 #!/usr/bin/python3
+
+"""
+Module with a function that prints a text with 2 new lines
+after each of these characters: `.`, `?` and `:`.
+"""
+
+
 def text_indentation(text):
-    """ This function takes a string and prints it with
-    two new lines after each delimiters.
-    Each new line should be indented with no spaces
-    at the beginning or end of each line.
-    Raises: TypeError: If the provided argument is not a string. """
-    if not isinstance(text, str):
+    """
+    prints a text with 2 new lines
+    """
+
+    if type(text) is not (str):
         raise TypeError("text must be a string")
 
-    delimiters = ".?:"
+    sentence = ""
 
-    lines = []
-    current_line = ""
-    for char in text:
-        current_line += char
-        if char in delimiters:
-            current_line = current_line.strip()
-            lines.append(current_line)
-            lines.append("")
-            current_line = ""
+    for i in text:
+        sentence += i
 
-    if current_line:
-        lines.append(current_line.strip())
+        if i in [".", "?", ":"]:
+            print("{}\n".format(sentence.strip()))
+            sentence = ""
 
-    for line in lines:
-        print(line)
+    if sentence.strip() != "":
+        print("{}".format(sentence.strip()), end="")
