@@ -6,10 +6,10 @@ This module provides a Rectangle class.
 
 
 class Rectangle:
-    """The Rectangle class with attributes 'width' and 'height', 
-    with following methods : 'area', 'perimeter', 'print', 'str', 'repr', and 'del'.
+    """The Rectangle class with attributes 'width' and 'height',
+    with following methods : area, perimeter, print, str, repr, del.
     Includes attribute 'number_of_instances' for the count,
-    and 'print_symbol' for printing. 
+    and 'print_symbol' for printing.
     'bigger_or_equal' and 'square' that generates a new Rectangle.
     """
     number_of_instances = 0
