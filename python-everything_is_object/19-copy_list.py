@@ -1,4 +1,3 @@
 #!/usr/bin/python3
 def copy_list(a_list):
-    cloned_list = a_list[:]
-    return cloned_list
+    return a_list[:]
