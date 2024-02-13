@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+===========================
+Module with class MyList
+===========================
+"""
+
+
 class MyList(list):
     """Subclass that inherits from list built in python class """
 
