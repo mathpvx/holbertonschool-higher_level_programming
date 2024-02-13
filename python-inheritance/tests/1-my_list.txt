@@ -1,3 +1,5 @@
+>>> MyList = __import__('1-my_list').MyList
+
 This library has a single function named ''print_sorted()''.
 
 Numbers:
