@@ -9,12 +9,10 @@ module with class Rectangle
 
 
 class Rectangle(BaseGeometry):
-    """
-    BaseGeometry sub-class' Rectangle.
-    """
+    """Rectangle class that inherits from BaseGeometry"""
+
     def __init__(self, width, height):
-        super().__init__()
         self.integer_validator("width", width)
-        self.integer_validator("height", height)
         self.__width = width
+        self.integer_validator("height", height)
         self.__height = height
