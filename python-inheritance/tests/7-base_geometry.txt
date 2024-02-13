@@ -45,3 +45,13 @@ if `base_geometry` module with non-integer value:
 Traceback (most recent call last):
 ...
 TypeError: age must be an integer
+
+>>> base_geometry.integer_validator("width", 2.2)
+Traceback (most recent call last):
+...
+TypeError: width must be an integer
+
+>>> base_geometry.integer_validator(27, 27)
+Traceback (most recent call last):
+...
+TypeError: width must be a string
