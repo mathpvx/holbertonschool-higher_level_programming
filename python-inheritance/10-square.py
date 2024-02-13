@@ -8,7 +8,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Rectangle class that inherits from BaseGeometry"""
+    """Square class that inherits from Rectangle"""
 
     def __init__(self, size):
         """constructs with size attribute"""
@@ -18,4 +18,4 @@ class Square(Rectangle):
 
     def area(self):
         """area method"""
-        return self.__size**2
+        return self.__size ** 2
