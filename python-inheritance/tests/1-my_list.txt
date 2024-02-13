@@ -2,9 +2,6 @@
 How to use 1-my_list.txt
 ============================================
 
-This library is very simple, since it only has one function called
- ''print_sorted()''.
-
 Numbers:
 ========
 ''print_sorted()'' returns the list sorted.
