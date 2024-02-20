@@ -3,6 +3,7 @@
 Base class for managing id attribute in all future classes.
 """
 class Base:
+    """Represent the base model."""
     __nb_objects = 0
 
     def __init__(self, id=None):
