@@ -10,6 +10,15 @@ class Square(Rectangle):
         """Initialize a Square instance"""
         super().__init__(size, size, x, y, id)
 
+    def to_dictionary(self):
+        """Return dictionary representation of Square"""
+        return {
+            'id': self.id,
+            'size': self.size,
+            'x': self.x,
+            'y': self.y
+        }
+
     def __str__(self):
         """String representation of Square"""
         return "[Square] ({}) {}/{} - {}".format(
