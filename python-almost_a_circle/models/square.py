@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Square class that inherits from base class """
+""" Square class that inherits from Rectangle class """
 from models.rectangle import Rectangle
 
 
@@ -29,3 +29,13 @@ class Square(Rectangle):
         """Setter method for size"""
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """Update attributes with arguments"""
+        if args:
+            attrs = ["id", "width", "height", "x", "y"]
+            for i, arg in enumerate(args):
+                setattr(self, attrs[i], arg)
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
