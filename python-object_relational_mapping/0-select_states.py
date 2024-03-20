@@ -8,9 +8,7 @@ import sys
 
 
 if __name__ == "__main__":
-    """execute only if from python interpreter itself"""
-
-    """ co to DB"""
+    """Connect to the database"""
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -18,12 +16,21 @@ if __name__ == "__main__":
         password=sys.argv[2],
         database=sys.argv[3])
 
-    """fetchall() returns a list of tuples of each row
-    iterates on each tuple and prints
-    """
+    # Create a cursor object
     cursor = db.cursor()
+
+    # Execute the SQL query
     cursor.execute("SELECT * FROM states ORDER BY states.id")
-    rows = cursor.fetchall()
-    for row in rows:
+
+    # Fetch all the rows
+    results = cursor.fetchall()
+
+    # Print the results
+    for row in results:
         print(row)
-    db.close()
+
+    # Close the cursor and database connection
+    if 'cursor' in locals():
+        cursor.close()
+    if 'db' in locals():
+        db.close()
