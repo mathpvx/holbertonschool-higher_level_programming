@@ -21,7 +21,7 @@ if __name__ == "__main__":
     # instantiate a cursor
     cursor = db.cursor()
     # retrieves all columns from the specified table
-    cursor.execute("SELECT * FROM `states`")
+    cursor.execute("SELECT * FROM `states` ORDER BY id ASC")
     # .fetchall() returns a list of tuples of each row
-    # # iterates on each tuple and prints
+    # iterates on each tuple and prints
     [print(states) for states in cursor.fetchall()]
