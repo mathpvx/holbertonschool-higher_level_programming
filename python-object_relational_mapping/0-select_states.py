@@ -11,6 +11,7 @@ import sys
 """execute only if from python interpreter itself"""
 if __name__ == "__main__":
     """ lists of arg taken when executing"""
+
     db = MySQLdb.connect(
         user=sys.argv[1],
         password=sys.argv[2],
@@ -18,12 +19,12 @@ if __name__ == "__main__":
         host="localhost",
         port=3306
         )
-    # instantiate a cursor
+    """ instantiate a cursor"""
     cursor = db.cursor()
-    # retrieves all columns from the specified table
+    """retrieves all columns from the specified table"""
     cursor.execute("SELECT * FROM `states` ORDER BY states.id")
-    # .fetchall() returns a list of tuples of each row
-    # iterates on each tuple and prints
+    """fetchall() returns a list of tuples of each row
+    iterates on each tuple and prints"""
     states = cursor.fetchall()
     for state in states:
         print(state)
