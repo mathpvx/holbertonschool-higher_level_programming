@@ -12,14 +12,15 @@ import sys
 if __name__ == "__main__":
     """ lists of arg taken when executing"""
 
-	""" co to DB"""
+    """ co to DB"""
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
         user=sys.argv[1],
         password=sys.argv[2],
-        database=sys.argv[3])
-    
+        database=sys.argv[3]
+    )
+
     """ instantiate a cursor"""
     cursor = db.cursor()
     """retrieves all columns from the specified table"""
