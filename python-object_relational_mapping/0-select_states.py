@@ -8,9 +8,8 @@ import MySQLdb
 import sys
 
 
-"""execute only if from python interpreter itself"""
 if __name__ == "__main__":
-    """ lists of arg taken when executing"""
+    """execute only if from python interpreter itself"""
 
     """ co to DB"""
     db = MySQLdb.connect(
@@ -18,16 +17,14 @@ if __name__ == "__main__":
         port=3306,
         user=sys.argv[1],
         password=sys.argv[2],
-        database=sys.argv[3]
-    )
+        database=sys.argv[3])
 
-    """ instantiate a cursor"""
-    cursor = db.cursor()
-    """retrieves all columns from the specified table"""
-    cursor.execute("SELECT * FROM states ORDER BY states.id")
     """fetchall() returns a list of tuples of each row
-    iterates on each tuple and prints"""
-    states = cursor.fetchall()
-    for state in states:
-        print(state)
+    iterates on each tuple and prints
+    """
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM states ORDER BY states.id")
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
     db.close()
