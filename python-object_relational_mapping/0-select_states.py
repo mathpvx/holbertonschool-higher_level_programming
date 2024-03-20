@@ -8,9 +8,9 @@ import MySQLdb
 import sys
 
 
-# execute only if from python interpreter itself
+"""execute only if from python interpreter itself"""
 if __name__ == "__main__":
-    # lists of arg taken when executing
+    """ lists of arg taken when executing"""
     db = MySQLdb.connect(
         user=sys.argv[1],
         password=sys.argv[2],
