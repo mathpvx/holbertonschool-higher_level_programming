@@ -22,7 +22,7 @@ if __name__ == "__main__":
     """ instantiate a cursor"""
     cursor = db.cursor()
     """retrieves all columns from the specified table"""
-    cursor.execute("SELECT * FROM `states` ORDER BY states.id")
+    cursor.execute("SELECT * FROM states ORDER BY states.id")
     """fetchall() returns a list of tuples of each row
     iterates on each tuple and prints"""
     states = cursor.fetchall()
