@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that lists all State objects from the specified database where the name contains 'a'.
+Script that lists all State objects from the specified
+database where the name contains 'a'.
 """
 
 
@@ -12,7 +13,8 @@ from model_state import Base, State
 
 if __name__ == "__main__":
     """
-    Main function to retrieve and print State objects from the specified database.
+    Main function to retrieve and print State objects
+    from the specified database.
     """
     username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
 
