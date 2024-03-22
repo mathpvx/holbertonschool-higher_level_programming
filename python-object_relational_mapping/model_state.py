@@ -1,33 +1,15 @@
-#!/usr/bin/python3
-"""contains the class definition of a State and
-an instance Base = declarative_base()"""
+"""
+Contains the class definition of a State using SQLAlchemy ORM.
+"""
 
-
-import sys
-from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
-
-# Create a declarative base instance
 Base = declarative_base()
 
-
-# Define the State class
 class State(Base):
-    __tablename__ = 'states'  # Link to the MySQL table states
+    """State class for representing states in a database."""
 
-    id = Column(Integer, primary_key=True, autoincrement=True)
+    __tablename__ = 'states'
+    id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-
-
-if __name__ == "__main__":
-    # Connect to MySQL server
-    engine = create_engine(
-        'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-            sys.argv[1], sys.argv[2], sys.argv[3]
-            ),
-        pool_pre_ping=True
-        )
-
-    # Create the table(s) if not exists
-    Base.metadata.create_all(engine)
