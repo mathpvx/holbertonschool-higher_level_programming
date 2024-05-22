@@ -1,5 +1,5 @@
-const color_changer = document.querySelector('#red_header');
+const colorChanger = document.querySelector('#red_header');
 const header = document.querySelector('header');
-color_changer.addEventListener('click', function () {
+colorChanger.addEventListener('click', function () {
   header.style.color = '#FF0000';
 });
